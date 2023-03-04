@@ -126,6 +126,7 @@ class UserdashboardView extends GetView<UserdashboardController> {
                 break;
               case 1:
                 print('Navigate to sync');
+                Get.toNamed(Routes.MYCART);
 
                 // ServerCommunicate.updateFromServer(false, widget.model);
 

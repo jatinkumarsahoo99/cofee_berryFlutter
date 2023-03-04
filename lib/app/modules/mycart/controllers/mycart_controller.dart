@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 
 class MycartController extends GetxController {
   //TODO: Implement MycartController
-
+  List<String> header = ['All','Nike','Adidas','Converse'];
   final count = 0.obs;
   @override
   void onInit() {
