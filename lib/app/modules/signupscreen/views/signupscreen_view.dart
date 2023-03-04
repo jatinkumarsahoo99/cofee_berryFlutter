@@ -63,21 +63,21 @@ class SignupscreenView extends GetView<SignupscreenController> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Card(
-                  child: formField1("Mobile Number",Icons.mobile_screen_share_sharp),
+                  child: formFieldMobile("Mobile Number",Icons.mobile_screen_share_sharp),
                 elevation: 0,
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Card(
-                child: formField1("Email Address",Icons.email),
+                child: formFieldEmail("Email Address",Icons.email),
                 elevation: 0,
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Card(
-                child: formField1("Password",Icons.lock),
+                child: formFieldPassword("Password",Icons.lock),
                 elevation: 0,
               ),
             ),
@@ -193,17 +193,105 @@ class SignupscreenView extends GetView<SignupscreenController> {
     );
   }
 
+   Widget formFieldPassword( String hint,IconData icons) {
+     return TextFormField(
+       style: TextStyle(fontSize: AppData.hinttextSize),
+       autofocus: false,
+       // enabled: enable,
+       controller:controller.userPassword,
+       // textCapitalization: TextCapitalization.sentences,
+       keyboardType: TextInputType.text,
+      /* inputFormatters: [
+         FilteringTextInputFormatter.allow(RegExp("[a-zA-Z. ]")),
+       ],*/
+       decoration: InputDecoration(
+         //prefixIcon: Icon(Icons.insert_drive_file_outlined),
+         floatingLabelBehavior: FloatingLabelBehavior.never,
+         // alignLabelWithHint: true,
+         hintText: hint,
+         // border: InputBorder.none,
+
+         prefixIcon: Icon(icons),
+         // border:InputBorder.none ,
+         enabledBorder: UnderlineInputBorder( //<-- SEE HERE
+           borderSide: BorderSide(
+               width: 1, color: Colors.black12),
+         ),
+
+         hintStyle: TextStyle(
+           color: AppData.hinttextcolor, // <-- Change this
+           fontSize: AppData.hinttextSize,
+           // fontWeight: FontWeight.w400,
+           // fontStyle: FontStyle.normal,
+         ),
+         // labelText: hint,
+         labelStyle: TextStyle(
+           color: AppData.lebletextcolor, // <-- Change this
+           fontSize: AppData.lebletextSize,
+           fontWeight: FontWeight.w400,
+           fontStyle: FontStyle.normal,
+         ),
+
+         contentPadding: EdgeInsets.only(left: 0, top: 15, right: 4,bottom: 0),
+       ),
+     );
+   }
+
    Widget formFieldMobile( String hint,IconData icons) {
      return TextFormField(
        style: TextStyle(fontSize: AppData.hinttextSize),
        autofocus: false,
        // enabled: enable,
-       controller:controller.userNameController,
-       textCapitalization: TextCapitalization.sentences,
-       keyboardType: TextInputType.text,
+       controller:controller.userNameMobileNumber,
+       // textCapitalization: TextCapitalization.sentences,
+       keyboardType: TextInputType.number,
        inputFormatters: [
-         FilteringTextInputFormatter.allow(RegExp("[a-zA-Z. ]")),
+         FilteringTextInputFormatter.allow(RegExp("[0-9]")),
        ],
+       decoration: InputDecoration(
+         //prefixIcon: Icon(Icons.insert_drive_file_outlined),
+         floatingLabelBehavior: FloatingLabelBehavior.never,
+         // alignLabelWithHint: true,
+         hintText: hint,
+         // border: InputBorder.none,
+
+         prefixIcon: Icon(icons),
+         // border:InputBorder.none ,
+         enabledBorder: UnderlineInputBorder( //<-- SEE HERE
+           borderSide: BorderSide(
+               width: 1, color: Colors.black12),
+         ),
+
+         hintStyle: TextStyle(
+           color: AppData.hinttextcolor, // <-- Change this
+           fontSize: AppData.hinttextSize,
+           // fontWeight: FontWeight.w400,
+           // fontStyle: FontStyle.normal,
+         ),
+         // labelText: hint,
+         labelStyle: TextStyle(
+           color: AppData.lebletextcolor, // <-- Change this
+           fontSize: AppData.lebletextSize,
+           fontWeight: FontWeight.w400,
+           fontStyle: FontStyle.normal,
+         ),
+
+         contentPadding: EdgeInsets.only(left: 0, top: 15, right: 4,bottom: 0),
+       ),
+     );
+   }
+
+   Widget formFieldEmail( String hint,IconData icons) {
+     return TextFormField(
+       style: TextStyle(fontSize: AppData.hinttextSize),
+       autofocus: false,
+       // enabled: enable,
+       controller:controller.userEmailAddress,
+       // textCapitalization: TextCapitalization.sentences,
+       keyboardType: TextInputType.text,
+      /* inputFormatters: [
+         FilteringTextInputFormatter.allow(RegExp("[0-9]")),
+       ],*/
        decoration: InputDecoration(
          //prefixIcon: Icon(Icons.insert_drive_file_outlined),
          floatingLabelBehavior: FloatingLabelBehavior.never,

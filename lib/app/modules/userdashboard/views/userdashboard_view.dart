@@ -126,12 +126,14 @@ class UserdashboardView extends GetView<UserdashboardController> {
                 break;
               case 1:
                 print('Navigate to sync');
+
                 // ServerCommunicate.updateFromServer(false, widget.model);
 
                 // Navigator.pushNamed(context, "/profileMepage");
                 break;
               case 2:
                 print('Navigate to profile');
+                Get.toNamed(Routes.PROFILE_SCREEN);
                 // Navigator.pushNamed(context, "/referralProgram");
                 break;
             }

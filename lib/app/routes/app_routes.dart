@@ -11,6 +11,8 @@ abstract class Routes {
   static const FORGOTPASSWORD = _Paths.FORGOTPASSWORD;
   static const USERDASHBOARD = _Paths.USERDASHBOARD;
   static const PRODUCT_DETAILS_PAGE = _Paths.PRODUCT_DETAILS_PAGE;
+  static const PROFILE_SCREEN = _Paths.PROFILE_SCREEN;
+  static const MYCART = _Paths.MYCART;
 }
 
 abstract class _Paths {
@@ -23,4 +25,6 @@ abstract class _Paths {
   static const FORGOTPASSWORD = '/forgotpassword';
   static const USERDASHBOARD = '/userdashboard';
   static const PRODUCT_DETAILS_PAGE = '/product-details-page';
+  static const PROFILE_SCREEN = '/profile-screen';
+  static const MYCART = '/mycart';
 }
