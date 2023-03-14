@@ -12,6 +12,7 @@ dependencies:
   url_launcher:
   shared_preferences:
   pin_code_fields:
+  flutter_inappwebview:
   flutter: 
     sdk: flutter
 

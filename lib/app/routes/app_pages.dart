@@ -20,6 +20,8 @@ import '../modules/userdashboard/bindings/userdashboard_binding.dart';
 import '../modules/userdashboard/views/userdashboard_view.dart';
 import '../modules/verification/bindings/verification_binding.dart';
 import '../modules/verification/views/verification_view.dart';
+import '../modules/webview/bindings/webview_binding.dart';
+import '../modules/webview/views/webview_view.dart';
 
 part 'app_routes.dart';
 
@@ -76,8 +78,13 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.MYCART,
-      page: () =>  MycartView(),
+      page: () => MycartView(),
       binding: MycartBinding(),
+    ),
+    GetPage(
+      name: _Paths.WEBVIEW,
+      page: () =>  WebviewView(),
+      binding: WebviewBinding(),
     ),
   ];
 }

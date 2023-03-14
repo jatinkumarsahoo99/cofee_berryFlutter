@@ -13,6 +13,7 @@ abstract class Routes {
   static const PRODUCT_DETAILS_PAGE = _Paths.PRODUCT_DETAILS_PAGE;
   static const PROFILE_SCREEN = _Paths.PROFILE_SCREEN;
   static const MYCART = _Paths.MYCART;
+  static const WEBVIEW = _Paths.WEBVIEW;
 }
 
 abstract class _Paths {
@@ -27,4 +28,5 @@ abstract class _Paths {
   static const PRODUCT_DETAILS_PAGE = '/product-details-page';
   static const PROFILE_SCREEN = '/profile-screen';
   static const MYCART = '/mycart';
+  static const WEBVIEW = '/webview';
 }

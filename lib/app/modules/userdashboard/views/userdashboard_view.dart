@@ -26,16 +26,21 @@ class UserdashboardView extends GetView<UserdashboardController> {
                 Text("Good Morning",style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.bold)),
               ],
             ),
-            Container(
-              child:Material(
-                elevation: 2.0,
-                // color: Colors.deepPurple,
-                shape: CircleBorder(),
-                child: CircleAvatar(
-                  radius: 20.0,
-                  backgroundImage: AssetImage('assets/images/logo.png') ,
-                ),
-              ) ,
+            InkWell(
+              onTap: (){
+                Get.toNamed(Routes.WEBVIEW);
+              },
+              child: Container(
+                child:Material(
+                  elevation: 2.0,
+                  // color: Colors.deepPurple,
+                  shape: CircleBorder(),
+                  child: CircleAvatar(
+                    radius: 20.0,
+                    backgroundImage: AssetImage('assets/images/logo.png') ,
+                  ),
+                ) ,
+              ),
             )
           ],
         ),
@@ -69,26 +74,43 @@ class UserdashboardView extends GetView<UserdashboardController> {
                               Get.toNamed(Routes.PRODUCT_DETAILS_PAGE);
                             },
                             child: Padding(
-                              padding: const EdgeInsets.all(2.0),
-                              child: ListTile(
-                                  leading: Container(
-                                    decoration: BoxDecoration(
-                                      border: Border.all(width: 2, color: Colors.white),
-                                      image: DecorationImage(
-                                        image: AssetImage("assets/images/cofee.jpg"),
-                                        fit: BoxFit.cover
-                                      ),
-                                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                                    ),
-                                    height: 160,
-                                    width: 70,
-                                    // child: Image.asset('assets/images/cofee.jpg'),
+                              padding: const EdgeInsets.only(left: 12.0,right: 12.0,bottom: 2,top: 2),
+                              child: Row(
+                                children: [
+                              Container(
+                              decoration: BoxDecoration(
+                              border: Border.all(width: 2, color: Colors.white),
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/cofee.jpg"),
+                                  fit: BoxFit.cover
+                              ),
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            ),
+                            height: 100,
+                            width: 90,
+                            // child: Image.asset('assets/images/cofee.jpg'),
+                          ),
+                                  SizedBox(
+                                    width: 6,
                                   ),
-                                 /* trailing: const Text(
-                                    "GFG",
-                                    style: TextStyle(color: Colors.green, fontSize: 15),
-                                  ),*/
-                                  title: Text("List item $index")),
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(child: Text("Robusta cherry AAA",
+                                        style: TextStyle(color: Colors.grey,fontSize: 15,),)),
+                                      Container(child: Text("\$199.99",
+                                          style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.bold))),
+                                      SizedBox(
+                                        height: MediaQuery.of(context).size.height*0.03,
+                                      ),
+                                      Container(
+                                        child: Text("x2"),
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
                             ),
                           );
                         }),
