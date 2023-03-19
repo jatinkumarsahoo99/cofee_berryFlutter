@@ -1,5 +1,9 @@
 import 'package:get/get.dart';
 
+import '../modules/canvaschart/bindings/canvaschart_binding.dart';
+import '../modules/canvaschart/views/canvaschart_view.dart';
+import '../modules/canvastutorial1/bindings/canvastutorial1_binding.dart';
+import '../modules/canvastutorial1/views/canvastutorial1_view.dart';
 import '../modules/forgotpassword/bindings/forgotpassword_binding.dart';
 import '../modules/forgotpassword/views/forgotpassword_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -83,8 +87,18 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.WEBVIEW,
-      page: () =>  WebviewView(),
+      page: () => WebviewView(),
       binding: WebviewBinding(),
+    ),
+    GetPage(
+      name: _Paths.CANVASTUTORIAL1,
+      page: () => const Canvastutorial1View(),
+      binding: Canvastutorial1Binding(),
+    ),
+    GetPage(
+      name: _Paths.CANVASCHART,
+      page: () => const CanvaschartView(),
+      binding: CanvaschartBinding(),
     ),
   ];
 }

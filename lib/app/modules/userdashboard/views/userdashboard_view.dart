@@ -22,7 +22,11 @@ class UserdashboardView extends GetView<UserdashboardController> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Hi Jatin",style: TextStyle(color: Colors.black,fontSize: 15)),
+                InkWell(
+                    onTap: (){
+                      Get.toNamed(Routes.CANVASTUTORIAL1);
+                    },
+                    child: Text("Hi Jatin",style: TextStyle(color: Colors.black,fontSize: 15))),
                 Text("Good Morning",style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.bold)),
               ],
             ),

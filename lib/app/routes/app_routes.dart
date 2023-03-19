@@ -14,6 +14,8 @@ abstract class Routes {
   static const PROFILE_SCREEN = _Paths.PROFILE_SCREEN;
   static const MYCART = _Paths.MYCART;
   static const WEBVIEW = _Paths.WEBVIEW;
+  static const CANVASTUTORIAL1 = _Paths.CANVASTUTORIAL1;
+  static const CANVASCHART = _Paths.CANVASCHART;
 }
 
 abstract class _Paths {
@@ -29,4 +31,6 @@ abstract class _Paths {
   static const PROFILE_SCREEN = '/profile-screen';
   static const MYCART = '/mycart';
   static const WEBVIEW = '/webview';
+  static const CANVASTUTORIAL1 = '/canvastutorial1';
+  static const CANVASCHART = '/canvaschart';
 }
