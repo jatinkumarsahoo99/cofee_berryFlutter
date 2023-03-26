@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/profile_screen_controller.dart';
 
 class ProfileScreenView extends GetView<ProfileScreenController> {
@@ -31,7 +32,7 @@ class ProfileScreenView extends GetView<ProfileScreenController> {
                       child: FloatingActionButton(
                         onPressed: () {
                           // controller.navigateToSignIn();
-                          // Get.toNamed(Routes.SIGNINSCREEN);
+                          Get.toNamed(Routes.FLUTTERLOCALPUSHNOTIFICATION);
                         },
                         child:
                             Icon(Icons.person, color: Colors.white),

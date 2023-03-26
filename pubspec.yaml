@@ -13,6 +13,11 @@ dependencies:
   shared_preferences:
   pin_code_fields:
   flutter_inappwebview:
+#  google_maps_flutter:
+#  flutter_map:
+#  flutter_mapbox_navigation:
+  flutter_local_notifications:
+  timezone:
   flutter: 
     sdk: flutter
 

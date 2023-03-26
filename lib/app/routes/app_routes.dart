@@ -16,6 +16,9 @@ abstract class Routes {
   static const WEBVIEW = _Paths.WEBVIEW;
   static const CANVASTUTORIAL1 = _Paths.CANVASTUTORIAL1;
   static const CANVASCHART = _Paths.CANVASCHART;
+  static const MAPVIEWSCREEN = _Paths.MAPVIEWSCREEN;
+  static const FLUTTERLOCALPUSHNOTIFICATION =
+      _Paths.FLUTTERLOCALPUSHNOTIFICATION;
 }
 
 abstract class _Paths {
@@ -33,4 +36,6 @@ abstract class _Paths {
   static const WEBVIEW = '/webview';
   static const CANVASTUTORIAL1 = '/canvastutorial1';
   static const CANVASCHART = '/canvaschart';
+  static const MAPVIEWSCREEN = '/mapviewscreen';
+  static const FLUTTERLOCALPUSHNOTIFICATION = '/flutterlocalpushnotification';
 }

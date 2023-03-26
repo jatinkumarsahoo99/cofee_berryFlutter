@@ -4,10 +4,14 @@ import '../modules/canvaschart/bindings/canvaschart_binding.dart';
 import '../modules/canvaschart/views/canvaschart_view.dart';
 import '../modules/canvastutorial1/bindings/canvastutorial1_binding.dart';
 import '../modules/canvastutorial1/views/canvastutorial1_view.dart';
+import '../modules/flutterlocalpushnotification/bindings/flutterlocalpushnotification_binding.dart';
+import '../modules/flutterlocalpushnotification/views/flutterlocalpushnotification_view.dart';
 import '../modules/forgotpassword/bindings/forgotpassword_binding.dart';
 import '../modules/forgotpassword/views/forgotpassword_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/mapviewscreen/bindings/mapviewscreen_binding.dart';
+import '../modules/mapviewscreen/views/mapviewscreen_view.dart';
 import '../modules/mycart/bindings/mycart_binding.dart';
 import '../modules/mycart/views/mycart_view.dart';
 import '../modules/productDetailsPage/bindings/product_details_page_binding.dart';
@@ -97,8 +101,18 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.CANVASCHART,
-      page: () => const CanvaschartView(),
+      page: () => CanvaschartView(),
       binding: CanvaschartBinding(),
+    ),
+    GetPage(
+      name: _Paths.MAPVIEWSCREEN,
+      page: () => MapviewscreenView(),
+      binding: MapviewscreenBinding(),
+    ),
+    GetPage(
+      name: _Paths.FLUTTERLOCALPUSHNOTIFICATION,
+      page: () =>  FlutterlocalpushnotificationView(),
+      binding: FlutterlocalpushnotificationBinding(),
     ),
   ];
 }
