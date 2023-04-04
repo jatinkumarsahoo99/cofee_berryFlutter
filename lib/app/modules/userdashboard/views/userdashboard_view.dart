@@ -29,8 +29,8 @@ class UserdashboardView extends GetView<UserdashboardController> {
                     child: Text("Hi Jatin",style: TextStyle(color: Colors.black,fontSize: 15))),
                 InkWell(
                     onTap: (){
-                      // Get.toNamed(Routes.CANVASCHART);
-                      Get.toNamed(Routes.MAPVIEWSCREEN);
+                      Get.toNamed(Routes.CANVASCHART);
+                      // Get.toNamed(Routes.MAPVIEWSCREEN);
                     },
                     child: Text("Good Morning",style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.bold))),
               ],

@@ -17,6 +17,7 @@ dependencies:
 #  flutter_map:
 #  flutter_mapbox_navigation:
   flutter_local_notifications:
+  get_it:
   timezone:
   flutter: 
     sdk: flutter
